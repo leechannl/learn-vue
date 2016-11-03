@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="/vue.js"></script>
+  <title>Lesson 2</title>
+</head>
+<body>
+
+<div id="app">
+  {{ message }}
+</div>
+
+</body>
+
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'hello'
+    },
+    beforeCreate: function () {
+      console.log('before create hook called')
+    },
+    created: function () {
+      console.log('created hook called')
+    },
+    beforeMount: function () {
+      console.log('before mount hook called')
+    },
+    mounted: function () {
+      console.log('mounted hook called')
+    },
+    beforeUpdate: function () {
+      console.log('before update hook called')
+    },
+    updated: function () {
+      console.log('updated hook called')
+    },
+    beforeDestroy: function () {
+      console.log('before destroy hook called')
+    },
+    destroyed: function () {
+      console.log('destroyed hook called')
+    },
+  })
+</script>
+
+</html>
